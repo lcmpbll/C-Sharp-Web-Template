@@ -1,10 +1,30 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>new Project</title>
+    <meta charset='utf-8'>
+    <title>Parcel Project</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   </head>
   <body>
-    <p>A C# html website it @Model.Verb </p>
+    @using Parcel.Models;
+    <h1>Parcel Shippers</h1>
+    <p>What would you like to ship?</p>
+    <form action="/index" method="post">
+      <label for="height">Height (in.)</label>
+      <input id="height" name="height" type="number">
+      <label for="width">Width (in.)</label>
+      <input id="width" name="width" type="number">
+      <label for="length">Length (in.)</label>
+      <input id="length"  name="length" type="number">
+      <label for="weight">Weight (lbs.)</label>
+      <input id="weight" name="weight" type="number">
+      <button type="submit">submit</button>
+    </form>
+    <h3>Shipping cost:</h3>
+    <ul>
+    <li>@Model.Height</li>    
+    </ul>
+    
+    
   </body>
 </html>
